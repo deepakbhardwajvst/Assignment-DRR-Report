@@ -1,0 +1,160 @@
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.responsive-table thead {
+  background-color: #ee89fe;
+  color: rgb(0, 0, 0);
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.responsive-table th {
+  cursor: pointer;
+}
+
+.responsive-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.responsive-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.responsive-table td {
+  vertical-align: middle;
+}
+
+button {
+  background-color: #f1c9f5;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #dd8dfd;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="month"],
+input[type="number"] {
+  padding: 5px;
+}
+
+.add-row-input {
+  width: 90%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.add-row-input:focus {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-color: #cd15ee;
+}
+.date-chip {
+  display: inline-block;
+  margin: 2px 4px;
+  padding: 2px 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+.search-bar input[type="text"] {
+  width: 30%;
+  border-radius: 20px;
+  padding: 10px 18px;
+  text-align: center;
+}
+.search-bar input[type="text"]::placeholder {
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table,
+  .responsive-table tbody,
+  .responsive-table tr,
+  .responsive-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .responsive-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 10px;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    display: inline-block;
+    width: 50%;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #555;
+  }
+
+  .responsive-table td:last-child {
+    margin-bottom: 0;
+  }
+
+  .responsive-table td button {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .add-row-input {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
