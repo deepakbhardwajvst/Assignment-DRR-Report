@@ -17,10 +17,10 @@ const DataForm = ({ onAddData }) => {
       const newData = { ...prevData };
 
       if (name.includes("Date")) {
-        // Check if the value is a valid date
+        // Checking if the value is a valid date
         const isValidDate = !isNaN(new Date(value).getTime());
 
-        // Update the date only if it's a valid date
+        // Updating the date only if it's a valid date
         newData[name] = isValidDate ? new Date(value) : value;
       } else {
         newData[name] = value;
@@ -51,7 +51,7 @@ const DataForm = ({ onAddData }) => {
   };
 
   const handleSubmit = (e) => {
-    // ... (unchanged code for other form fields)
+  
 
     const newData = {
       id,
@@ -68,7 +68,7 @@ const DataForm = ({ onAddData }) => {
 
     onAddData(newData);
 
-    // Reset the form data
+    // Reseting the form data
     setFormData({
       startDate: new Date(),
       endDate: new Date(),
