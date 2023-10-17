@@ -32,7 +32,7 @@ const DataForm = ({ onAddData }) => {
 
   const handleAddExcludedDate = () => {
     if (
-      formData.excludedDate &&
+      formData.excludedDates &&
       !formData.excludedDates.includes(formData.excludedDate)
     ) {
       setFormData((prevData) => ({
