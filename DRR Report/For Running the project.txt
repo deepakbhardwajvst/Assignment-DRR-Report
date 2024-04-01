@@ -1,2 +1,2 @@
 for runing react file command is "npm run dev"
-and for api "nodemon"
+and for api "nodemon" 
